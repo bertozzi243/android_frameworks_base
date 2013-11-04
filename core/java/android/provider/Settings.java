@@ -2583,6 +2583,8 @@ public final class Settings {
 
             // At one time in System, then Global, but now back in Secure
             MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);
+
+            MOVED_TO_SECURE.add(Secure.VOLUME_LINK_NOTIFICATION);
         }
 
         @UnsupportedAppUsage
@@ -10115,6 +10117,14 @@ public final class Settings {
          */
         public static final String STATUSBAR_CLOCK_HIDDEN_BY_HOME = "statusbar_clock_hidden_by_home";
 
+        /*
+         * Boolean value whether to link ringtone and notification volume
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        private static final Validator VOLUME_LINK_NOTIFICATION_VALIDATOR = BOOLEAN_VALIDATOR;
+
         /**
          * Controls whether tap gesture is enabled.
          * @hide
@@ -10272,7 +10282,8 @@ public final class Settings {
             GLOBAL_ACTIONS_PANEL_ENABLED,
             AWARE_LOCK_ENABLED,
             AWARE_TAP_PAUSE_GESTURE_COUNT,
-            AWARE_TAP_PAUSE_TOUCH_COUNT
+            AWARE_TAP_PAUSE_TOUCH_COUNT,
+            VOLUME_LINK_NOTIFICATION
         };
 
         /**
@@ -10475,6 +10486,7 @@ public final class Settings {
             VALIDATORS.put(AWARE_TAP_PAUSE_GESTURE_COUNT, NON_NEGATIVE_INTEGER_VALIDATOR);
             VALIDATORS.put(AWARE_TAP_PAUSE_TOUCH_COUNT, NON_NEGATIVE_INTEGER_VALIDATOR);
             VALIDATORS.put(TAP_GESTURE, TAP_GESTURE_VALIDATOR);
+            VALIDATORS.put(VOLUME_LINK_NOTIFICATION, VOLUME_LINK_NOTIFICATION_VALIDATOR);
         }
 
         /**
