@@ -5339,6 +5339,16 @@ public final class Settings {
         public static final Validator POCKET_JUDGE_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
+         * Indicates whether ANBI (Accidental navigation button interaction) is enabled.
+         *
+         * @hide
+         */
+        public static final String ANBI_ENABLED_OPTION = "anbi_enabled_option";
+        /** @hide */
+        private static final Validator ANBI_ENABLED_OPTION_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -5411,6 +5421,7 @@ public final class Settings {
             BUTTON_BACKLIGHT_TIMEOUT,
             BUTTON_BACKLIGHT_ON_TOUCH_ONLY,
             NAVIGATION_HANDLE_WIDTH,
+            ANBI_ENABLED_OPTION,
         };
 
         /**
@@ -5551,6 +5562,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(NAVIGATION_HANDLE_WIDTH);
             PRIVATE_SETTINGS.add(POCKET_JUDGE);
+            PRIVATE_SETTINGS.add(ANBI_ENABLED_OPTION);
         }
 
         /**
@@ -5662,6 +5674,7 @@ public final class Settings {
             VALIDATORS.put(NAVIGATION_HANDLE_WIDTH,
                     NAVIGATION_HANDLE_WIDTH_VALIDATOR);
             VALIDATORS.put(POCKET_JUDGE, POCKET_JUDGE_VALIDATOR);
+            VALIDATORS.put(ANBI_ENABLED_OPTION, ANBI_ENABLED_OPTION_VALIDATOR);
         }
 
         /**
