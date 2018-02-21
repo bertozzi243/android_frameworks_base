@@ -4279,6 +4279,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 && (!isNavBarVirtKey || mNavBarVirtualKeyHapticFeedbackEnabled)
                 && hapticFeedbackRequested
                 && event.getRepeatCount() == 0
+                && !keyguardOn()
                 // Trigger haptic feedback only for "real" events.
                 && source != InputDevice.SOURCE_CUSTOM;
 
