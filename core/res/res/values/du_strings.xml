@@ -37,5 +37,8 @@
 
     <!-- Bluetooth service -->
     <string name="bluetooth_airplane_mode_toast">Bluetooth will stay on during airplane mode</string>
+    
+    <!-- Pocket Lock --> 
+    <string name="pocket_lock_message_long_press">Press and hold power button to unlock</string>    
 
 </resources>
