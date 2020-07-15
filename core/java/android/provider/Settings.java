@@ -10117,7 +10117,7 @@ public final class Settings {
          */
         public static final String STATUSBAR_CLOCK_HIDDEN_BY_HOME = "statusbar_clock_hidden_by_home";
 
-        /*
+        /**
          * Boolean value whether to link ringtone and notification volume
          * @hide
          */
